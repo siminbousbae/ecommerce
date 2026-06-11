@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoply | Home</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="top-bar">
+    <a class="logo" href="index.html">Shoply</a>
+    <div class="search">
+      <input type="text" data-product-search placeholder="Search for products...">
+      <button type="button" aria-label="Search">Go</button>
+    </div>
+  </header>
+
+  <nav class="nav" data-nav></nav>
+
+  <main class="main">
+    <aside class="sidebar" aria-label="Product categories">
+      <button class="category active" type="button" data-category="All">All <span>&gt;</span></button>
+      <button class="category" type="button" data-category="Electronics">Electronics <span>&gt;</span></button>
+      <button class="category" type="button" data-category="Fashion">Fashion <span>&gt;</span></button>
+      <button class="category" type="button" data-category="Shoes">Shoes <span>&gt;</span></button>
+      <button class="category" type="button" data-category="Devices">Devices <span>&gt;</span></button>
+    </aside>
+
+    <section class="content">
+      <div class="banner">
+        <img id="slider" src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1400" alt="Shoply seasonal sale">
+        <div class="banner-copy">
+          <h1>Shoply</h1>
+          <p>Fresh products from independent sellers, ready for your cart.</p>
+        </div>
+        <button class="slider-btn prev" type="button" onclick="prevSlide()" aria-label="Previous slide">&lsaquo;</button>
+        <button class="slider-btn next" type="button" onclick="nextSlide()" aria-label="Next slide">&rsaquo;</button>
+      </div>
+
+      <div class="section-head">
+        <div>
+          <h2>Featured Products</h2>
+          <p class="muted">Browse products from all active sellers.</p>
+        </div>
+      </div>
+      <div class="products" data-products></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    const images = [
+      "https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1400",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400",
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1400"
+    ];
+    let slideIndex = 0;
+    function showSlide() {
+      const slider = document.getElementById("slider");
+      if (slider) slider.src = images[slideIndex];
+    }
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % images.length;
+      showSlide();
+    }
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + images.length) % images.length;
+      showSlide();
+    }
+    setInterval(nextSlide, 4500);
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoply | User Management</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="top-bar">
+    <a class="logo" href="index.html">Shoply</a>
+  </header>
+  <nav class="nav" data-nav></nav>
+
+  <main class="page">
+    <div class="section-head">
+      <div>
+        <h1 class="page-title">User Management</h1>
+        <p class="muted">Enable, disable, search, and reset user accounts.</p>
+      </div>
+    </div>
+    <section class="stats-grid" data-user-counts></section>
+    <div class="filter-bar">
+      <input data-user-search placeholder="Search by name or email">
+      <select data-role-filter aria-label="Role filter">
+        <option value="all">All Roles</option>
+        <option value="seller">Sellers</option>
+        <option value="buyer">Buyers</option>
+      </select>
+    </div>
+    <section class="table-card" data-admin-users></section>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

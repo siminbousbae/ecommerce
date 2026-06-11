@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoply | Cart</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="top-bar">
+    <a class="logo" href="index.html">Shoply</a>
+  </header>
+  <nav class="nav" data-nav></nav>
+
+  <main class="cart-container">
+    <div class="section-head">
+      <div>
+        <h1 class="page-title">Your Cart</h1>
+        <p class="muted">Adjust quantities before checkout.</p>
+      </div>
+      <a class="button secondary" href="index.html">Continue Shopping</a>
+    </div>
+    <div data-cart-items></div>
+    <div class="cart-summary">
+      <h2>Total: <span data-cart-total>$0.00</span></h2>
+      <button class="checkout-btn" type="button" data-checkout onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

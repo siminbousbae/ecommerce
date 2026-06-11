@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoply | Checkout</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="top-bar">
+    <a class="logo" href="index.html">Shoply</a>
+  </header>
+  <nav class="nav" data-nav></nav>
+
+  <main class="page">
+    <h1 class="page-title">Checkout</h1>
+    <div class="checkout-layout">
+      <form class="form-card" data-checkout-form>
+        <h2>Shipping Address</h2>
+        <div class="form-grid">
+          <div class="form-row"><label for="shipName">Name</label><input id="shipName" name="shipName" required></div>
+          <div class="form-row"><label for="street">Street</label><input id="street" name="street" required></div>
+          <div class="form-row"><label for="city">City</label><input id="city" name="city" required></div>
+          <div class="form-row"><label for="postalCode">Postal Code</label><input id="postalCode" name="postalCode" required></div>
+          <div class="form-row"><label for="phone">Phone</label><input id="phone" name="phone" required></div>
+        </div>
+        <h2>Virtual Payment</h2>
+        <div class="form-grid">
+          <div class="form-row"><label for="cardNumber">Card Number</label><input id="cardNumber" name="cardNumber" inputmode="numeric" placeholder="1234 5678 9012 3456" required></div>
+          <div class="form-row"><label for="expiry">Expiry Date</label><input id="expiry" name="expiry" placeholder="MM/YY" required></div>
+          <div class="form-row"><label for="cvv">CVV</label><input id="cvv" name="cvv" inputmode="numeric" maxlength="3" required></div>
+          <div class="form-row"><label for="cardholder">Cardholder Name</label><input id="cardholder" name="cardholder" required></div>
+          <button class="button" type="submit">Pay Now</button>
+        </div>
+      </form>
+      <aside class="panel">
+        <h2>Order Summary</h2>
+        <div data-order-summary></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
